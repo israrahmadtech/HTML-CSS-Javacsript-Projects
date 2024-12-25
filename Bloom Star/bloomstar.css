@@ -1,0 +1,648 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+    background-color: white;
+    color: black;
+    height: 100%;
+    font-family: "Mulish", sans-serif;
+    position: relative;
+    font-size: 15px;
+}
+li{ list-style-type: none;}
+a{ text-decoration: none; color: black; display: inline-block;}
+p, h1, h2, h3, h4, h5, h6, a, li{
+    letter-spacing: 1px;
+}
+
+/* ...................  Navbar  .................................. */
+#navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+#navbar .links ul{
+    display: flex;
+}
+#navbar .links ul a{
+    padding: 10px;
+    font-weight: bold;
+}
+#navbar .links ul a:hover{
+    background-color: #212121;
+    color: yellow;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+#navbar img{
+    width: 210px;
+}
+#navbar .hamburger{
+    display: none;
+}
+#navbar .hamLines{
+    display: none;
+}
+
+/* ...........................  Header  ......................... */
+#header{
+    width: 100%;
+    height: 80vh;
+    background-image: url('https://img.freepik.com/premium-photo/empty-white-classroom-background-with-green-chalkboard-table-seat-wooden-floor_10307-1501.jpg?w=826');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+}
+#header img{
+    height: 100%;
+    position: absolute;
+}
+#header img:nth-child(2){
+    width: 50%;
+}
+#header h3{
+    font-size: 2rem;
+    position: absolute;
+    top: 40%;
+    left: 8rem;
+}
+#header h2{
+    font-size: 3rem;
+    width: 30rem;
+    position: absolute;
+    top: 50%;
+    left: 7rem;
+}
+
+/* .......................  Main Section  .......................... */
+#main{
+    width: 100%;
+    background-image: url(img/about-bg.jpg);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+/* events */
+#main .events{
+    padding: 1rem 0;
+    text-align: center;
+    background-image: url(img/ticker-bg.jpg);
+}
+#main .events h3{
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 5px 1px grey;
+    display: inline-block;
+}
+.events .events-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    overflow-x: hidden;
+}
+.events-container img{
+    width: 250px;
+    height: 170px;
+    border: 3px solid black;
+}
+.events-container img:nth-child(6),
+.events-container img:nth-child(7){
+    display: none;
+}
+
+/* What's new */
+.what-new{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5rem 3rem;
+}
+.what-images{
+    width: 100%;
+}
+.what-new img{
+    display: inline-block;
+    width: 100%;
+}
+.what-new .what-content h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+/* Missions */
+.mission{
+    width: 100%;
+    padding: 0 1rem 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+}
+.mission .mission_box{
+    width: 30rem;
+    background-color: aliceblue;
+    padding: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
+    box-shadow: 0 0 5px 1px grey;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.mission_box h4{
+    color: aliceblue;
+    font-size: 1.6rem;
+    font-family: 'Times New Roman', Times, serif;
+    padding-bottom: 0.7rem;
+}
+.mission_box .num{
+    margin-top: 1rem;
+    text-align: right;
+    font-size: large;
+}
+.mission .box{
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    width: 150px;
+    height: 90px;
+    background-color: #0a8e79;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    z-index: -1;
+}
+.mission .mission_box:hover{
+        background-color: #0a8e79;
+        color: white;
+        .box{
+            background-color: yellow;
+            transition: background-color 0.3s ease-in-out;
+        }
+        h4{
+            color: black;
+            transition: color 0.3s ease-in-out;
+     }
+}
+
+/* ........................  Contact Styling  .................... */
+#contact{
+    width: 100%;
+    display: flex;
+    padding: 2rem;
+    background-color: #0a8e79;
+    color: aliceblue;
+}
+.contact-content{
+    width: 50%;
+}
+.contact-content span:nth-child(2){
+    display: none;
+}
+.contact-form{
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+#contact h3{
+    font-size: 1.3rem;
+    padding: 1rem 0;
+}
+#contact input, #contact textarea, #contact button{
+    color: aliceblue;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid aliceblue;
+    background-color: transparent;
+    margin: 1rem 0;
+    width: 100%;
+}
+#contact input:focus{
+    outline: none;
+}
+#contact .inputs2{
+    width: 100%;
+}
+#contact .inputs1{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+#contact button{
+    border: none;
+    cursor: pointer;
+    background-color: aliceblue;
+    color: #0a8e79;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s ease-in-out;
+}
+#contact button:active{
+    scale: 98%;
+}
+#contact #btn1:hover{
+    background-color: yellow;
+}
+.contact-form h2{
+    text-align: center;
+    width: 80%;
+}
+
+/* .................. About Styling  ................... */
+#about{
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    background-image: url("img/about-bg.jpg");
+}
+.about-left{
+    width: 40%;
+    box-shadow: 0 0 5px 1px #a1a1a1;
+    padding: 1rem;
+    line-height: 1.3rem;
+    background-color: aliceblue;
+}
+.about-left li{
+    list-style-type: square;
+    list-style-position: inside;
+}
+.about-right{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about-right img{
+    width: 100%;
+    box-shadow: 0 0 5px 2px #a1a1a1;
+}
+/* ...................  Tuition Fees  ................. */
+#fees{
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    background-image: url('img/ticker-bg.jpg');
+}
+table{
+    border-collapse: collapse;
+}
+table td, table th{
+    padding: 10px;
+    border: 1px solid #0a8e79;
+}
+table tr:nth-child(even){
+    background-color: #eefcf9;
+}
+#fees h3{
+    padding: 1rem;
+}
+.courses-fee tr td:nth-child(2){
+    width: 200px;
+}
+
+/* .......................  Registeration style  .................... */
+#register{
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    background-color: #0a8e79;
+}
+.register-notice{
+    width: 40%;
+    text-align: center;
+    box-shadow: 0 0 5px 1px #212121;
+    padding: 1rem;
+    line-height: 1.3rem;
+    background-color: aliceblue;
+}
+.register-notice p:first-child{
+    font-weight: bold;
+}
+.register-form{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: aliceblue;
+}
+.register-form input{
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    background-color: aliceblue;
+    color: black;
+}
+.register-form button{
+    cursor: pointer;
+    background-color: aliceblue;
+    color: #0a8e79;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out;
+}
+.register-form button:active{
+    scale: 98% 95%;
+}
+.register-form #btn2:hover{
+    background-color: yellow;
+}
+
+/* ....................  Footer  ...................... */
+#footer{
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 0 0;
+    color: #075347;
+    background-color: #0a8e79;
+}
+.footer-container{
+    background-color: aliceblue;
+    width: 70%;
+    padding: 2rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    box-shadow: 0 0 10px 2px #212121;
+    display: flex;
+    justify-content: space-around;
+}
+.footer-container ul{
+    display: flex;
+    gap: 1rem;
+}
+.footer-container ul a{
+    color: #0a8e79;
+}
+.footer-container ul i{
+    font-size: 1.5rem;
+    transition: 0.3s ease-in-out;
+}
+.footer-container ul i:hover{
+    color: #075347;
+}
+
+/* ...............  RESPONSIVE - MEDIA QUERY  .................... */
+
+@media (min-width: 300px) and (max-width: 400px){
+    p{
+        font-size: 13px;
+    }
+    #navbar{
+        justify-content: end;
+    }
+    #navbar .links{
+        display: none;
+    }
+    #navbar .hamburger{
+        background-color: #0a8e78fa;
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50vw;
+        height: 100vh;
+        padding: 3rem 1.5rem;
+        z-index: 100;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease-in-out;
+    }
+    #navbar .hamburger.slideHam{
+        transform: translateX(0);
+    }
+    #navbar .hamburger ul{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    #navbar .hamburger a{
+        color: aliceblue;
+        font-weight: bold   ;
+    }
+    #navbar .hamburger a:hover{
+        color: yellow;
+    }
+    #navbar .hamLines{
+        display: inline-block;
+        position: absolute;
+        top: 17px;
+        left: 15px;
+        width: 1.7rem;
+        height: 1.4rem;
+        transition: left 0.4s ease-in-out;
+        z-index: 120;
+    }
+    #navbar .hamLines #hamBtn{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 1100;
+        cursor: pointer;
+    }
+    #navbar .hamLines .cross{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    #navbar .hamLines .cross span{
+        position: absolute;
+        display: inline-block;
+        width: 100%;
+        height: 3px;
+        border-radius: 2px;
+        background-color: #075347;
+        z-index: 100;
+    }
+    .hamLines .cross span:nth-child(2){
+        top: 10px;
+    }
+    .hamLines .cross span:nth-child(3){
+        top: 20px;
+        /* transition: transform 0.5s ease-in-out; */
+    }
+    .hamLines .cross span#removeSpan.span2{display: none;}
+    .hamLines .cross span#span1.span1{
+        top: 11px;
+        transform: rotate(45deg);
+        background-color: white;
+    }
+    .hamLines .cross span#span3.span3{
+        top: 11px;
+        transform: rotate(-45deg);
+        background-color: white;
+    }
+    #navbar .hamLines.moveLines{
+        left: 115px;
+    }
+    #navbar .hamLines.hamLinesFixed{
+        position: fixed;
+    }
+
+/* ................  Header  ......................... */
+    #header{
+        height: 50vh;
+    }
+    #header img{
+        display: none;
+    }
+     #header h3{
+        width: 100%;
+        font-size: 1rem;
+        top: 22%;
+        left: 0%;
+        text-align: center;
+        text-shadow: 0 0 5px black;
+     }
+     #header h2{
+        font-size: 1.2rem;
+        top: 30%;
+        left: 16%;
+        width: 70%;
+        text-align: center;
+        text-shadow: 0 0 5px black;
+     }
+
+/* ............  Events ..................... */
+    .events .events-container{
+    overflow-x: visible;
+    animation-name: events;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    }
+    @keyframes events {
+    0%{
+        transform: translateX(117%);
+    }
+    100%{
+        transform: translateX(-117%);
+    }
+    }
+    .events-container img:nth-child(6),
+    .events-container img:nth-child(7){
+    display: inline-block;
+    }
+/*  .......... Whats New  ..................... */
+    .what-new{
+        flex-direction: column;  
+        padding: 1rem 0;  
+    }
+    .what-new .what-content{
+        padding: 1rem 1rem;
+    }
+    .what-new .what-content h3{
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+/* .........  Mission  ....................... */
+    .mission{
+        flex-direction: column;
+    }
+    .mission .mission_box{
+        width: 100%;
+        padding: 1rem;
+    }
+    .mission_box h4{
+        font-size: 1.3rem;
+    }
+    .mission .box{
+        width: 130px;
+        height: 70px;
+    }
+
+/*  .............. ...........  Contact  ............... */
+    #contact{
+        flex-direction: column;
+        padding: 0.8rem;
+    }
+    .contact-content, .contact-form{
+        width: 100%;
+    }
+    .contact-content span:nth-child(2){
+        display: inline;
+    }
+    .contact-content span:nth-child(1){
+        display: none;
+    }
+    #contact .inputs1, #contact .inputs1{
+        flex-direction: column;
+        gap: 0;
+    }
+    #contact .inputs1 input{
+        margin: 10px 0;
+    }
+    .contact-form h2{
+        text-align: center;
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+/* ................  About  ................ */
+    #about{
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .about-left{
+        width: 100%;
+    }
+    .about-left ul, .about-left h4{
+        display: none;
+    }
+    .about-right{
+        width: 100%;
+    }
+
+/* .............  Fees  ........................ */
+    #fees{
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .courses-fee tr td:nth-child(2){
+        width: 70px;
+    }
+
+/* ..............  Registration  ................ */
+    #register{
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    .register-notice, .register-form{
+        width: 100%;
+    }
+    .register-form h3{
+        text-align: center;
+    }
+
+/* ........  footer  ................. */
+    .footer-container{
+        flex-direction: column-reverse;
+        width: 90%;
+        padding: 1rem;
+        align-items: center;
+        gap: 10px;
+    }
+    .footer-container p{
+        font-size: 11px;
+    }
+    .footer-container ul i{
+        font-size: 1.2rem;
+    }
+}
