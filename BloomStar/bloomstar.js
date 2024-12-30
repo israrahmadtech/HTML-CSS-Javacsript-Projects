@@ -1,12 +1,17 @@
-const email = document.getElementById('email').value
-const phone = document.getElementById('phone').value
+const email = document.getElementById('email')
+const phone = document.getElementById('phone')
 const btn1 = document.getElementById('btn1')
 const form = document.getElementById('form')
-btn1.addEventListener('click', function(e){
-    if(email.length < 3 || phone.length < 3){
-        form.innerHTML = `<h2>Please refresh the page</h2> <h2>And Submit the form correctly</h2>`
+const formPara = document.getElementById('formPara')
+form.addEventListener('submit', function(e){
+    e.preventDefault()
+})
+btn1.addEventListener('click', function(){
+    formPara.classList.add('formPara')
+    if(email.value.length < 3 || phone.value.length < 3){
+        formPara.innerHTML = `Please enter the data correctly`
     } else{
-        form.innerHTML = `<h2>Thank you for contacting us</h2> <h2>We Will Respond You as Soon as Possible</h2>`
+        formPara.innerHTML = `Thank you for contacting us We Will Respond You as Soon as Possible`
     }
 })
 
