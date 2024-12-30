@@ -11,7 +11,7 @@ btn1.addEventListener('click', function(){
     if(email.value.length < 3 || phone.value.length < 3){
         formPara.innerHTML = `Please enter the data correctly`
     } else{
-        formPara.innerHTML = `Thank you for contacting us We Will Respond You as Soon as Possible`
+        form.innerHTML = `<h1>Thank you for contacting us We Will Respond You as Soon as Possible</h1>`
     }
 })
 
