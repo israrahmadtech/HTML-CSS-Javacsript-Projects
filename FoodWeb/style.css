@@ -429,6 +429,12 @@ body {
 
 /* ########## responsive styling ###########  */
 @media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    .testimonial-box{
+        width: auto;
+    }
     .navbar {
         opacity: 0.95
     }
@@ -550,6 +556,9 @@ body {
     .img-container {
         margin: 0%;
     }
+    #footer h2{
+        font-size: 1.6rem;
+    }
 }
 
 /* ########### media query ############3 */
@@ -557,6 +566,17 @@ body {
     html {
         font-size: 50%;
     }
+    .container {
+        width: 95%;
+    }
+    .testimonial-box{
+        width: auto;
+    }
+    .about-img img{
+        height: 227px;
+        object-position: center;
+    }
+
 
     .testimonial-container {
         flex-direction: column;
@@ -584,6 +604,9 @@ body {
     .contact-image {
         width: 90%;
         margin: 3rem auto;
+    }
+    .contact-image img{
+        height: 218px;
     }
 
 }
