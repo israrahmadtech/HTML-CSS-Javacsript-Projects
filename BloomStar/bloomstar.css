@@ -43,7 +43,7 @@ img:hover{
     font-weight: bold;
 }
 #navbar .links ul a:hover{
-    background-color: #212121;
+    background-color: #0a8e79;
     color: yellow;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
