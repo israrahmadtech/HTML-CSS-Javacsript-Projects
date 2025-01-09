@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Superior Shoes | Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="hamMenu">
+            <div class="hamLines">
+                <span class="span1"></span>
+                <span class="span2"></span>
+                <span class="span3"></span>
+            </div>
+            <button id="hamBtn"></button>
+        </div>
+        <div class="hamburger">
+            <div class="ham-links">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../Product/product.html">Products</a></li>
+                    <li><a href="../About/about.html">About</a></li>
+                    <li><a href="../Cantact/contact.html">Contact</a></li>
+                    <li><a href="../HelpCenter/help.html">Help</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="logo">
+                <h1><a href="../index.html" title="Home Page"><span>SUPERIOR</span><span>SHOES</span></a></h1>
+            </div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../Product/product.html">Products</a></li>
+                <li><a href="../About/about.html">About</a></li>
+                <li><a href="../Cantact/contact.html">Contact</a></li>
+                <li><a href="../HelpCenter/help.html">Help</a></li>
+                <li><a href="#" class="addToCart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+            <li class="addToCart2"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </div>
+    </nav>
+
+
+    <section id="cart">
+        <h2>SHOPPING CART</h2>
+        <div class="container">
+            <div class="cartProducts">
+                <div class="cartRow">
+                    <div class="cartProduct">PRODUCT</div>
+                    <div class="price">PRICE</div>
+                    <div class="quantity">QUANTITY</div>
+                    <div class="subTotal">SUBTOTAL</div>
+                </div>
+                <div class="cartRow removeProduct">
+                    <div class="cartProduct">
+                        <div class="cartProdImg">
+                            <img src="../Product/Gallery/charsada/shoe2.webp" alt="product">
+                        </div>
+                        <div class="productDetails">
+                            <h3>Slippers</h3>
+                            <p>Color: Jiffy Black</p>
+                            <p>Size: 7.4MB</p>
+                            <p><button class="btn">Edit</button><button class="btn removeBtn">Remove</button></p>
+                        </div>
+                    </div>
+                    <div class="price">Rs40,300</div>
+                    <div class="quantity">
+                        <button>-</button><p>1</p><button>+</button>
+                    </div>
+                    <div class="subTotal">Rs40,300</div>
+                </div>
+                <div class="cartRow">
+                    <div class="cartProduct">
+                        <div class="cartProdImg">
+                            <img src="../Product/Gallery/kaptan/shoe2.webp" alt="product">
+                        </div>
+                        <div class="productDetails">
+                            <h3>BOOTS</h3>
+                            <p>Color: Jiffy Black</p>
+                            <p>Size: 7.4MB</p>
+                            <p><button class="btn">Edit</button><button class="btn removeBtn">Remove</button></p>
+                        </div>
+                    </div>
+                    <div class="price">Rs40,300</div>
+                    <div class="quantity">
+                        <button id="decrease">-</button><p id="productValue">1</p><button id="increase">+</button>
+                    </div>
+                    <div class="subTotal">Rs40,300</div>
+                </div>
+                <div class="cartRow">
+                    <div class="cartProduct">
+                        <div class="cartProdImg">
+                            <img src="../Product/Gallery/nike/nike22.jpeg" alt="product">
+                        </div>
+                        <div class="productDetails">
+                            <h3>Slippers</h3>
+                            <p>Color: Jiffy Black</p>
+                            <p>Size: 7.4MB</p>
+                            <p><button class="btn">Edit</button><button class="btn removeBtn">Remove</button></p>
+                        </div>
+                    </div>
+                    <div class="price">Rs40,300</div>
+                    <div class="quantity">
+                        <button>-</button><p>1</p><button>+</button>
+                    </div>
+                    <div class="subTotal">Rs40,300</div>
+                </div>
+                <div class="cartRow">
+                    <div class="cartProduct">
+                        <div class="cartProdImg">
+                            <img src="../Product/Gallery/charsada/shoe6.webp" alt="product">
+                        </div>
+                        <div class="productDetails">
+                            <h3>Slippers</h3>
+                            <p>Color: Jiffy Black</p>
+                            <p>Size: 7.4MB</p>
+                            <p><button class="btn">Edit</button><button class="btn removeBtn">Remove</button></p>
+                        </div>
+                    </div>
+                    <div class="price">Rs40,300</div>
+                    <div class="quantity">
+                        <button>-</button><p>1</p><button>+</button>
+                    </div>
+                    <div class="subTotal">Rs40,300</div>
+                </div>
+
+            </div>
+            <div class="cartCalculations">
+                <h4>ORDER SUMMARY</h4>
+                <div class="row">
+                    <span>SUBTOTAL</span>
+                    <span>Rs1200000</span>
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="Enter promo code">
+                    <button class="btn">APPLY</button>
+                </div>
+                <span>Shipping cost</span>
+                <div class="row3">
+                    <p>Join us for free delivery</p>
+                    <a href=""><button class="btn2 btn">SIGN UP FOR FREE SHIPPING</button></a>
+                </div>
+                <div class="row row4">
+                    <span>Grand Total</span>
+                    <span>Rs1200000</span>
+                </div>
+                <button class="btn3 btn">ORDER NOW</button>
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="footer">
+        <div class="container">
+            <div class="logo">
+                Copyright &copy; <p>Superior Shoes</p>
+                <h4><a href="index.html" title="Home Page"><span>SUPERIOR</span><span>SHOES</span></a></h4>
+                2025. All rights reserved
+            </div>
+            <div class="footer-links">
+                <a href="#Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#tiktok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body>
+
+</html>

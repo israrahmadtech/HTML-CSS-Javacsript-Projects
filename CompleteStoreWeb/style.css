@@ -1,0 +1,695 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aliceblue;
+    color: black;
+    position: relative;
+}
+.container{
+    width: 80%;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    color: aliceblue;
+}
+li{
+    list-style-type: none;
+    display: inline-block;
+}
+p, h1,h2,h3,h4,h5, a, li, span{
+    letter-spacing: 1px;
+}
+.btn{
+    background-color: #212121;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+button{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+button:active{
+    transform: scale(98%);
+}
+/* .......................   Navigation Bar   ................................. */
+#navbar{
+    background-color: #212121;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 100;
+}
+#navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.logo h1 a{
+    color: #212121;
+    background-color: aliceblue;
+}
+.logo h1 span{
+    display: inline-block;
+    padding: 5px 10px;
+}
+.logo h1 span:last-child{
+    background-color: #212121;
+    color: aliceblue;
+    border: 2px solid aliceblue;
+}
+
+#navbar .container a{
+    font-weight: bold;
+    margin: 0 10px;
+    border-bottom: transparent;
+    transition: border-bottom 0.3s ease-in-out;
+}
+#navbar .container ul a:hover{
+    border-bottom: 2px solid aliceblue;
+}
+#navbar .container ul .addToCart{
+    font-size: 20px;
+}
+#navbar .container ul .addToCart:hover{
+    border-bottom: 0;
+}
+#navbar .container .addToCart2{
+    display: none;
+    font-size: 20px;
+}
+/* ...........  Hamburger  ..................... */
+#navbar .hamburger{
+    display: none;
+    width: 200px;
+    background-color: #212121;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5rem 0 0 3rem;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in-out;
+    opacity: 0.9;
+    z-index: 1000;
+}
+#navbar .hamMenu{
+    display: none;
+}
+#navbar .hamburger.moveHam{
+    transform: translateX(0%);
+}
+#navbar .hamburger ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#navbar .hamMenu{
+    width: 40px;
+    height: 24px;
+    position: absolute;
+    top: 21px;
+    left: 21px;
+    z-index: 10000;
+    transition: left 0.4s ease-in-out;
+}
+#navbar .hamMenu #hamBtn{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 11000;
+    opacity: 0;
+}
+.hamMenu .hamLines span{
+    display: inline-block;
+    width: 80%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: aliceblue;
+    position: absolute;
+}
+.hamMenu .hamLines span:nth-child(2){
+    top: 10px;
+}
+.hamMenu .hamLines span:nth-child(3){
+    top: 20px;
+}
+.hamMenu .hamLines .span1.removeSpan1{
+    display: none;
+}
+.hamMenu .hamLines .span2.rotateSpan2{
+    transform: rotate(45deg);
+    transition: transform 0.4s ease-in-out;
+}
+.hamMenu .hamLines .span3.rotateSpan3{
+    top: 10px;
+    transform: rotate(-45deg);
+    transition: transform 0.4s ease-in-out;
+}
+.hamburger a{
+    font-weight: bold;
+}
+/* move Ham */
+#navbar .hamMenu.moveMenu{
+    left: 150px;
+}
+
+/* ...................   HERO  ................................ */
+#hero{
+    width: 100%;
+    height: 85vh;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/hero-shoe.webp);
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: aliceblue;
+}
+#hero h1, #hero h2{
+    color: aliceblue;
+    font-size: 50px;
+    margin-left: 5rem;
+    width: 450px;
+    background-color: #2020206e;
+    padding: 0 10px;
+}
+#hero h2{
+    color: yellow;
+}
+
+/* Main Products */
+.first{
+    margin-bottom: 3rem;
+}
+.first p{
+    text-align: end;
+    padding: 15px 30px 0 0;
+}
+.first #more{
+    color: black;
+    font-weight: bold;
+}
+
+/* Main Login */
+.login{
+    width: 80%;
+    padding: 30px;
+    background-color: #212121;
+    margin-bottom: 2rem;
+    color: aliceblue;
+    text-align: center;
+}
+.login p{
+    color: greenyellow;
+}
+.login p{
+    margin: 10px 0;
+}
+.login .btn{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+/* ...........................  ABOUT PAGE  .................. */
+#about {
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+#about .container{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+#about .about-content {
+    width: 50%;
+    padding: 20px;
+    /* background-color: #eeeeee; */
+    z-index: 10;
+}
+#about .about-content h1 {
+    display: flex;
+    font-size: 27px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#about .about-content p {
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: justify;
+    padding-bottom: 20px;
+}
+#about .about-highlights li {
+    margin: 10px 0;
+    font-size: 14px;
+    display: list-item;
+}
+#about .about-img {
+    width: 50%;
+    height: 500px;
+    position: relative;
+}
+#about .about-img img{
+    width: 472px;
+    z-index: 1000000;
+    position: absolute;
+    top: 2%;
+    left: 4%;
+}
+#about .about-img .about-circle{
+    width: 300px;
+    height: 300px;
+    background: rgb(181,181,181);
+    background: linear-gradient(149deg, rgba(181,181,181,1) 0%, rgba(48,48,57,1) 63%, rgba(136,136,136,1) 100%);
+    border-radius: 50%;
+    box-shadow: -200px 0 100px 200px rgb(201, 200, 200);
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    z-index: 1;
+}
+#about strong{
+    font-weight: lighter;
+    transition: font-weight 0.3s ease-in-out;
+}
+#about:hover{
+    strong{
+        font-weight: bold;
+    }
+}
+#about span{
+    transition: color 0.3s ease-in-out;
+}
+#about:hover{
+    span{
+        color: tomato;
+    }
+}
+
+/* ...............................  Cart   ...................... */
+#cart{
+    width: 100%;
+    margin-top: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e6eef4;
+}
+#cart .container{
+    width: 97%;
+    height: 100%;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 10px;
+}
+#cart h2{
+    width: 96%;
+    font-size: 34px;
+}
+#cart .cartProducts{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#cart .cartProducts .cartRow{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 0.5px solid rgb(173, 161, 161);
+    font-size: 13px;
+}
+#cart .cartProducts .cartRow .cartProduct{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+#cart .cartProducts .cartRow .price{
+    width: 12.667%;
+}
+
+#cart .container .cartCalculations{
+    font-size: 13px;
+    color: grey;
+    width: 30%;
+    height: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(163, 163, 163);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#cart .container .cartCalculations .row{
+    display: flex;
+    justify-content: space-between;
+}
+#cart .container .cartCalculations .row3{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 4px;
+    background-color: #eeeeee;
+    gap: 4px;
+}
+#cart .container .cartCalculations .row3 .btn2{
+    color: black;
+    width: 100%;
+    background-color: white;
+    font-weight: bold;
+}
+#cart .container .cartCalculations .btn3{
+    padding: 10px;
+    font-weight: bold;
+}
+#cart .container .cartCalculations .row4{
+    font-size: 16px;
+    font-weight: bold;
+}
+#cart .container .cartCalculations .row input{
+    width: 70%;
+    padding: 10px;
+    border: 1px solid rgb(218, 211, 211);
+    border-radius: 4px;
+}
+#cart .container .cartCalculations .row .btn{
+    width: 28%;
+}
+#cart .container .cartCalculations .row input:focus{
+    outline: none;
+    border-color: grey;
+}
+.cartProduct .cartProdImg{
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    border: 1px solid;
+}
+.cartProducts .cartProduct img{
+    object-fit: cover;
+    width: 106%;
+    height: 100%;
+}
+.cartProducts .cartProduct .productDetails{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cartProducts .cartProduct .productDetails button:first-child{
+    margin-right: 10px;
+}
+#cart .cartProducts .cartRow .quantity{
+    width: 30%;
+}
+#cart .cartProducts .cartRow .quantity button,
+#cart .cartProducts .cartRow .quantity p{
+    display: inline-block;
+    color: black;
+    padding: 10px 15px;
+    background-color: aliceblue;
+    border: 1px solid rgb(219, 219, 219);
+}
+#cart .cartProducts .cartRow .subtotal{
+    width: 16.666666666666668%;
+}
+#cart .container .cartCalculations .row{
+    padding: 10px 0;
+}
+
+/* ...............................  Footer   ...................... */
+#footer{
+    width: 100%;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    font-weight: bold;
+    align-self: flex-end;
+    z-index: 100;
+}
+#footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.logo h4{
+    display: inline-block;
+}
+.logo h4 a{
+    color: #212121;
+    background-color: aliceblue;
+}
+.logo h4 span{
+    display: inline-block;
+    padding: 5px 10px;
+}
+.logo h4 span:last-child{
+    background-color: #212121;
+    color: aliceblue;
+    border: 2px solid aliceblue;
+}
+#footer .footer-links a{
+    margin-left: 1rem;
+    color: aliceblue;
+}
+#footer .footer-links i{
+    font-size: 25px;
+}
+#footer .logo p{
+    display: none;
+    font-weight: bold;
+}
+
+/* ....................   Responsive through media querry */
+@media (max-width:900px) {
+    .container{
+        width: 90%;
+    }
+/*   HERO */
+    #hero{
+        height: 80vh;
+        text-align: center;
+        padding: 5rem;
+        align-items: flex-start;
+    }
+    #hero h2, #hero h1{
+        margin-left: 0;
+        width: 85%;
+        font-size: 37px;
+    }
+
+    #navbar .container a{
+        font-size: 14px;
+    }
+    /* Login */
+    .login{
+        padding: 25px;
+        width: 85%;
+    }
+
+/* .............  cart .............. */
+    #cart .container{
+        flex-direction: column;
+    }
+    #cart .cartProducts{
+        width: 100%;
+    }
+    #cart .container .cartCalculations{
+        width: 400px;
+    }
+/* ...........  ABOUT  ............... */
+    #about{
+        align-items: flex-start;
+    }
+    #about .about-content {
+        width: 100%;
+    }
+    #about .about-img {
+        display: none;
+    }
+    #about .about-content p {
+        padding: 10px;
+        border: 1px solid #838383;
+        border-radius: 4px;
+    }
+}
+@media (max-width: 750px){
+    #navbar{
+        justify-content: flex-end;
+    }
+    #navbar .container{
+        width: 70%;
+        justify-content: space-between;
+    }
+    #navbar .container ul{
+        display: none;
+    }
+    #navbar .hamburger{
+        display: inline-block;
+    }
+    #navbar .hamMenu{
+        display: inline-block;
+    }
+    #navbar .container .addToCart2{
+        font-size: 25px;
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+/* HERO */
+    #hero{
+        padding: 3rem;
+    }
+
+/* ABOUT */
+    #about .about-content h1 {
+    font-size: 23px;
+    }
+    #about .about-highlights h2{
+        font-size: 18px;
+    }
+    /* PRODUCT */
+    .side-bar ul li a{
+        font-size: 14px;
+    }
+    /* Login */
+    .login{
+        padding: 20px;
+        width: 90%;
+    }
+
+/* Cart */
+    #cart h2{
+        font-size: 20px;
+    }
+    #cart .cartProducts .cartRow .btn{
+        padding: 5px 5px;
+    }
+
+/* footer */
+    #footer .container{
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+    .logo h4{
+        font-size: 13px;
+    }
+    #footer .logo{
+        font-weight: lighter;
+    }
+}
+@media (max-width: 499px){
+    #navbar .container{
+        width: 77%;
+    }
+    #navbar .logo h1{
+        font-size: 19px;
+    }
+    /* hamburger */
+    #navbar .hamburger{
+        width: 180px;
+    }
+    #navbar .hamMenu.moveMenu{
+        left: 130px;
+    }
+    .hamMenu .hamLines span{
+        height: 2.5px;
+        width: 73%;
+    }
+    /* HERO */
+    
+    #hero{
+        padding: 10px;
+    }
+    #hero h2, #hero h1{
+        width: 100%;
+        font-size: 29px;
+    }
+    /* ABOUT */
+
+    #about .about-content h1{
+        font-size: 20px;
+    }
+    #about strong{
+        font-weight: bold;
+    }
+    #about span{
+        color: tomato;
+    }
+    /* PRODUCT */
+    .side-bar ul li:nth-child(4),
+    .side-bar ul li:nth-child(5){
+        display: none;
+    }
+    /* Login */
+    .login{
+        padding: 5px;
+        width: 95%;
+    }
+    .login h2{
+        font-size: 20px;
+    }
+    .login p{
+        font-size: 14px;
+    }
+
+    /* Cart */
+    #cart .cartProducts .cartRow .cartProduct{
+        width: 100%;
+    }
+    #cart .cartProducts .cartRow .subTotal,
+    #cart .cartProducts .cartRow .quantity,
+    #cart .cartProducts .cartRow .price{
+        display: none;
+    }
+    #cart .container .cartCalculations{
+        width: 100%;
+    }
+
+/* Footer */
+    #footer .logo{
+        font-size: 13px;
+        text-align: center;
+    }
+    #footer .logo h4 span{
+        display: none;
+    }
+    #footer .logo p{
+        display: inline-block;
+        font-weight: bold;
+    }
+}

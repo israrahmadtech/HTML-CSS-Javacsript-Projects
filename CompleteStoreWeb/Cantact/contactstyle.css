@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    box-sizing: border-box;
+    outline: none;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: #080a22;
+}
+
+body>a{
+    border: 2px solid white;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 18px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+/* ...................   Contact  ................................ */
+
+section {
+    min-height: 100vh;
+}
+
+.contact-mainpage {
+}
+
+/* comments */
+
+.comments {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding-top: 5rem;
+}
+
+.com-art {
+    width: 450px;
+    height: 500px;
+}
+
+.com-art h1 {
+    font-weight: 400;
+    color: #fff;
+    font-size: 3.9rem;
+    margin-top: 1rem;
+    line-height: 6rem;
+}
+
+.com-art .let-us {
+    font-weight: 400;
+    background: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    color: transparent;
+    color: transparent;
+    font-size: 5.5rem;
+    margin-top: 1rem;
+    line-height: 6rem;
+}
+
+.com-art>p {
+    font-size: 1.4rem;
+    padding-top: 1.3rem;
+    color: #ffffffdb;
+    letter-spacing: 0.4px;
+}
+
+.com-art p span {
+    color: #7373eb;
+    font-size: 1.5rem;
+}
+
+.com-art h2 {
+    color: #ffffffea;
+    font-size: 2.3rem;
+    padding-top: 2rem;
+    word-spacing: 0.7px;
+    letter-spacing: 0.4px;
+}
+
+.comments-sci {
+    width: 215px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.comments-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background: #5454dd;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.com-art-etc {
+    width: 500px;
+    height: 500px;
+    background: #3b3b7575;
+    border: 0.5px solid #3b3b75df;
+    border-radius: 0.8rem;
+    padding: 22px 20px 20px 25px;
+    box-shadow: 0px 2px 19px -7px #c332bf;
+}
+
+.com-art-etc p {
+    padding: 2rem 4rem 1rem 1rem;
+    font-size: 1.4rem;
+}
+
+.com-art-etc span {
+    display: inline-block;
+    padding: 0rem 20rem 0rem 1rem;
+    font-size: 1.4rem;
+    margin: 1rem auto;
+}
+
+.com-art-etc .username {
+    background: #06061f;
+    padding: 1.5rem 23rem 1.5rem 1rem;
+    margin-left: 1.2rem;
+    border-radius: 1rem;
+    width: 90.5%;
+}
+
+.com-art-etc input {
+    background: #06061f;
+    padding: 1.5rem 0rem 1.5rem 1rem;
+    margin-left: 1.2rem;
+    border-radius: 1rem;
+}
+
+.com-textarea {
+    height: 17vh;
+    padding: 12px;
+    width: 28.5vw;
+    border-radius: 1rem;
+    background: #06061f;
+    margin-left: 1.2rem;
+}
+
+.com-button {
+    margin: 2rem 1rem;
+    padding: 8px 18px 8px 23px;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    color: #ffffffd5;
+    background: linear-gradient(60deg, rgba(68, 0, 210, 1) 21%, rgba(113, 24, 164, 1) 61%, rgba(152, 47, 214, 1) 100%, rgba(94, 19, 138, 1) 100%, rgba(12, 30, 37, 1) 100%);
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+::placeholder {
+    color: #9d9dd1b5;
+}
+
+
+@media (max-width: 900px) {
+    .com-art-etc input{
+        display: block;
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    .com-textarea{
+        width: 90%;
+        height: 29vh;
+    }
+}
+
+@media (max-width: 750px){
+    
+}
+
+@media (max-width: 499px){
+   
+}

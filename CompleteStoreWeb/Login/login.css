@@ -1,0 +1,244 @@
+/*Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #212121; 
+    /* overflow: hidden;      */
+    display: flex;
+    justify-content: center;    
+    align-items: center;       
+    gap: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.container{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90vh;
+    padding-top: 3rem;
+}
+body>a{
+    color: aliceblue;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100000;
+}
+button{
+    cursor: pointer;
+}
+button:active{
+    transform: scale(98%);
+}
+
+/* Hide Section */
+form{
+    opacity: 0;
+}
+#loginForm.loginRemove{
+    opacity: 1;
+}
+#registerForm.registerRemove{
+    opacity: 1;
+}
+#loginBtn, #RegisterBtn{
+    top: 30px;
+    color: aliceblue;
+    text-decoration: none;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 4px;
+    padding: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 16px;
+    position: fixed;
+    z-index: 100000;
+}
+#loginBtn:hover, #RegisterBtn:hover{
+    background-color: aliceblue;
+    color: black;
+}
+#loginBtn{
+    right: 30px;
+}
+#RegisterBtn{
+    right: 100px;
+}
+
+/* Logo Section */
+/* removed */
+
+
+/* Login Container */
+.login-container {
+    color: aliceblue;
+    width: 40%;
+    height: 5%;
+    padding: 20px;
+    border-radius: 8px;      /* Rounded corners */
+    box-shadow: 2 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form Styling */
+form {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Spacing between form elements */
+}
+
+form h2 {
+    margin-bottom: 10px;
+}
+
+form p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+form label {
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+    /* margin-top: 5px; */
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    /* margin-top: 5px; */
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+form input:focus{
+    outline: none;
+    border: 1px solid blue;
+}
+
+form button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid black;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+form button:active {
+    transform: scale(98%);
+}
+
+form .forgot-password {
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: right;
+    cursor: pointer;
+    color: #7289da;
+}
+
+form a {
+    color: #7289da;
+    text-decoration: none;
+}
+
+form a:hover {
+    text-decoration: underline;
+}
+
+
+.logIn-With {
+    /* margin: 10px; */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.logIn-With i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.logIn-With i:hover {
+    transition: all 1s ease-in-out;
+    transform: scale(1.5);
+}
+#loginToggle, #registerToggle{
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .hide button{
+        font-size: 30px;
+    }
+}
+@media (max-width: 750px) {
+    #loginBtn, #RegisterBtn{
+        display: none;
+    }
+    .container{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .login-container{
+        width: 100%;
+    }
+    .hide{
+        display: none;
+    }
+    .login-container1{
+        z-index: 1000;
+    }
+    #loginToggle, #registerToggle{
+        display: inline-block;
+        color: aliceblue;
+        text-decoration: none;
+        border: 2px solid white;
+        background-color: transparent;
+        border-radius: 4px;
+        padding: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        position: fixed;
+        top: 20px;
+        z-index: 100000;
+    }
+    #loginToggle{
+        right: 110px;
+    }
+    #registerToggle{
+        right: 20px;
+    }
+    .removeLogin{
+        display: none;
+    }
+    .removeRegister{
+        display: none;
+    }
+}
+@media (max-width: 520px) {
+    .container{
+        margin-top: 2rem;
+    }
+}
