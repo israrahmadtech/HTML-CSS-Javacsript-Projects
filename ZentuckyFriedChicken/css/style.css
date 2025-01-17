@@ -346,6 +346,9 @@ body{
     border: none;
     font-size: 40px;
 }
+.testimonial-content .testBtns button img{
+    height: 50px;
+}
 .testimonial-content .test-content{
     padding: 0 10px 10px 10px;
     display: flex;
@@ -624,6 +627,7 @@ body{
     .testimonial-content .testBtns{
         display: none;
     }
+    
     .testimonial-content .test-content h4{
         font-weight: 600;
     }
