@@ -1,0 +1,49 @@
+
+
+/* .............  Classes  ..................... */
+/* text colors */
+.text-red{
+    color:#E31E25;
+}
+.text-yellow{
+    color: #FFCC02;
+}
+.text-white{
+    color: #ffffff;
+}
+.text-black{
+    color: #000000;
+}
+.text-gray{
+    color: #353535;
+}
+/* bg colors */
+.bg-red{
+    background-color:#E31E25;
+}
+.bg-yellow{
+    background-color: #FFCC02;
+}
+.bg-white{
+    background-color: #ffffff;
+}
+.bg-black{
+    background-color: #000000;
+}
+.bg-gray{
+    background-color: #353535;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+button{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+li{
+    list-style-type: none;
+}
+
+/* p, h1, h2, h3, h4, h5, h6, a, li, span, */
