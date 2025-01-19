@@ -9,13 +9,20 @@
 body{
     width: 100%;
     font-family: "Poppins", serif;
+    display: flex;
+    justify-content: center;
+    background-color: #212121;
 }
 
+#mainContainer{
+    width: 1349px;
+    background-color: #ffffff;
+}
 
 /*  ......................  Header  ........................ */
 #header{
     width: 100%;
-    height: 100vh;
+    height: 650px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../Assets/images\ \(1\).jpeg);
     background-position: center;
     background-repeat: no-repeat;
@@ -365,6 +372,7 @@ body{
     width: 70px;
     height: 70px;
     border-radius: 50%;
+    border: 1px solid #212121;
 }
 
 /* ....................  Timing  ............... */
@@ -435,6 +443,10 @@ body{
 }
 
 @media (max-width: 500px){
+    /* Container */
+    #mainContainer{
+        width: 100%;
+    }
     /* HamBurger */
     #hamburger{
         display: inline-block;
